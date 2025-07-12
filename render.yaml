@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: curriculum_data_api
+    runtime: python     
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    branch: main
+    plan: free
+    autoDeploy: true

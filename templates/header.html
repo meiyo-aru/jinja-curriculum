@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bem-Vindo</title>
-</head>
-<body>
-    <h1>Olá, {{ nome }}!</h1>
-    <p>Estamos felizes em ter você aqui. Seu {{teste}}</p>
-    {% include 'about_me.html' with context %}
-</body>
-</html>
+<header>
+    <h1>{{name}}</h1>
+    <h1>{{positions}}</h1>
+
+    <p class="contact-info">
+        <span>{{address}}</span><br>
+        <span>{{phone}}</span><br>
+        <span>E-mail: </span>
+        <a href="mailTo:{{mail}}">
+            <span>{{mail}}</span>
+        </a> 
+        <span>| LinkedIn: 
+            <a href="{{linkedin}}">{{profile_title}}</a>
+        </span>
+    </p>
+</header>

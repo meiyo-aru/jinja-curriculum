@@ -1,0 +1,18 @@
+<link href="/static/style.css" rel="stylesheet"> 
+
+<section class="language-section">
+    <h2>{{language_title}} 
+        {% if lang != 'en' %}
+            (Language)
+        {% endif %}
+    </h2>
+    <div>
+        <label class="language">
+            <input type="radio" name="language" id="radio_pt" value="pt" onclick="changeLanguage('pt')"> {{language_pt}}
+        </label>
+        <label class="language">
+            <input type="radio" name="language" id="radio_en" value="en" onclick="changeLanguage('en')" checked> {{language_en}}
+        </label>
+    </div>
+</section> 
+<script src="/static/script.js"></script>

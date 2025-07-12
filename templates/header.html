@@ -1,10 +1,15 @@
+<link href="/static/style.css" rel="stylesheet"> 
 <header>
     <h1>{{name}}</h1>
-    <h1>{{positions}}</h1>
+    <h2 id="positions">{{positions}}</h2>
 
     <p class="contact-info">
-        <span>{{address}}</span><br>
-        <span>{{phone}}</span><br>
+        <span>{{address_title}}: {{address}}</span><br>
+        <span>{{phone_title}}: {{phone_01}}
+            {% if phone_02 %}
+            /{{phone_02}}
+            {% endif %}
+        </span><br>
         <span>E-mail: </span>
         <a href="mailTo:{{mail}}">
             <span>{{mail}}</span>
@@ -14,3 +19,4 @@
         </span>
     </p>
 </header>
+<script src="/static/script.js"></script>

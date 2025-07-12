@@ -1,0 +1,195 @@
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+@media (min-width: 1000px) {
+    body {
+        margin: 0;
+        padding: 20px;
+        padding-left: 20vw;
+        padding-right: 20vw;
+        background-color: #d5e2f0;
+        color: #333;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width:1000px) {
+    body {
+        margin: 0;
+        padding: 20px;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        background-color: #d5e2f0;
+        color: #333;
+    }
+}
+@media only screen and (max-width:500px) {
+    body {
+        font-size: smaller;
+        margin: 0;
+        padding-top: 20px;
+        background-color: #d5e2f0;
+        color: #333;
+    }
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(150deg, #8000ff, #00ffd0);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+.contact-info {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.contact-info a:hover {
+    color: #FFD700;
+}
+.section {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.language-section {
+    background: linear-gradient(150deg, #8000ff, #00ffd0);
+    padding: 15px;
+    color: white;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.language-section h2 {
+    color: white;
+    border-bottom: 2px solid #ffffff;
+}
+h2 {
+    font-size: 1.1em;
+    color: #8000ff; 
+    border-bottom: 2px solid #8000ff;
+    padding-bottom: 5px;
+}
+.skills {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 0.7em;
+}
+.skill {
+    width: 30%;
+    transition: transform 0.3s;
+    cursor: pointer; 
+}
+.skill:hover {
+    transform: scale(1.05);
+}
+.skill-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin: 5px 0;
+}
+.skill-level {
+    height: 100%;
+    background: #28a745;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    transition: width 0.3s;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+.project-list {
+    list-style-type: none;
+    padding: 0;
+    
+}
+.project-list li {
+    background: #f8f9fa;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+.project-list li:hover {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+.language:hover {
+    cursor: pointer;
+}
+p, li, .skills, label, span{
+    font-size: 0.8em;
+}
+.level {
+    background: #5555ef47;
+    width: fit-content;
+    margin: 0px 20px;
+    padding: 7px;
+    border-radius: 5px;
+}
+#positions {
+    color: white;
+    margin-top: 0px;
+    font-size: larger;
+    border-image: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)) 1;
+    animation: animateBorderGradient 2s ease infinite;
+}
+@keyframes animateBorderGradient {
+    0% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
+    50% { border-image-source: linear-gradient(90deg, purple, rgb(25, 0, 255), red, yellow, green, rgb(0, 225, 255)); } /* Invertendo/mudando a ordem para animar */
+    100% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
+}
+.information-container {
+    background-color: #d8d8e17a;
+    width:auto;
+    max-width: fit-content;
+    padding: 10px 15px;
+    padding-right: 65px;
+    border-radius: 5px;
+}
+.information-container span {
+    margin-right: 40px;
+}
+span {
+    flex-wrap: revert-layer;
+    overflow-wrap: normal;
+    word-break: normal;
+    white-space: nowrap;
+}
+.list-item {
+    display:flex;
+    flex-direction: column;
+}
+.title-list-item {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+button.btn {
+    align-self:flex-end;
+    transition: transform 0.2s ease;
+}
+button.btn:active{
+    transform: scale(0.85);
+}

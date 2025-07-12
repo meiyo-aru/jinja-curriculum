@@ -77,28 +77,28 @@ async def get_academic_training(people_id: int = 1, language: str = "pt"):
     response = await get_data_external_api(url_api_final) # call function for handle exception and await
     
     template = env.get_template("academic_training.html") # load the template
-    html =  f""" 
-            <section class="section">
-                <h2>{translator.translate("Formação Acadêmica", dest = language).text}</h2>
-            """
-                     
-    for academic_training in response:
-        # translate the html before send a response
-        html += template.render(
-            name = translator.translate(academic_training.get("name"), dest = language).text,
-            level = translator.translate(academic_training.get("level"), dest = language).text,
-            institution_title = translator.translate("Instituição", dest = language).text,
-            institution = translator.translate(academic_training.get("institution"), dest = language).text,
-            location_title = translator.translate("Localização", dest = language).text,
-            location = academic_training.get("address"),
-            start_date_title = translator.translate("Início", dest = language).text,
-            start_date = academic_training.get("start_date"),
-            end_date_title = translator.translate("Fim", dest = language).text,
-            end_date = academic_training.get("end_date")
-        )
     
-    html += "</section>"
-     
+    academic_trainings_translated = []
+    for item in response:
+        translated_item = {
+            "name" : translator.translate(item.get("name"), dest = language).text,
+            "level" : translator.translate(item.get("level"), dest = language).text,
+            "institution_title" : translator.translate("Instituição", dest = language).text,
+            "institution" : item.get("institution"),
+            "location_title" : translator.translate("Localização", dest = language).text,
+            "location" : item.get("address"),
+            "start_date_title" : translator.translate("Início", dest = language).text,
+            "start_date" : item.get("start_date"),
+            "end_date_title" : translator.translate("Fim", dest = language).text,
+            "end_date" : item.get("end_date")
+        }
+        academic_trainings_translated.append(translated_item)        
+    
+    html = template.render(
+        academic_trainings = academic_trainings_translated,
+        academic_training_title = translator.translate("Formação Acadêmica", dest = language).text
+    )
+    
     return html
 
 

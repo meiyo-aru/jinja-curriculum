@@ -13,13 +13,25 @@ url_api = "https://curriculum-data-api.onrender.com" # url of data-api
 env = Environment(loader = FileSystemLoader('templates')) # search templates in /templates
 app.mount("/static", StaticFiles(directory="static"), name="static") # mount 'static' directory for give static archives (css, js)
 
-@app.get("/") # root endpoint
-async def get_root():
-    return {"mensagem": "curriculum_render_api no ar!"}
+# @app.get("/") # root endpoint
+# async def get_root():
+#     return {"mensagem": "curriculum_render_api no ar!"}
 
 @app.head("/", status_code = status.HTTP_200_OK) # endpoint for check api status
 async def head_root():
     return None
+
+@app.get("/", response_class=HTMLResponse)
+async def serve_main_html():
+    try:
+        # Carrega o template Jinja2 do seu arquivo HTML principal
+        template = env.get_template("index.html") # Certifique-se que seu HTML principal se chama 'index.html' e está na pasta 'templates'
+        return HTMLResponse(template.render())
+    except Exception as e:
+        # Em caso de erro ao carregar o template principal
+        return HTMLResponse(f"Erro ao carregar a página principal: {e}", status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+# ... (Seus endpoints /get/header, /get/about_me, /get/academic_training, etc.) ...
 
 @app.get("/get/about_me") # return a html with a section about the person from the resume
 async def get_about_me(people_id: int = 1, language: str = "pt"):

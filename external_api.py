@@ -1,14 +1,12 @@
 import requests
 from api import *
 
-async def get_data_external_api(url_api):
+def get_data_external_api(url_api):
     try:
         response_api = requests.get(url_api, timeout=5) # add timeout
         response_api.raise_for_status() # throw exception for status HTTP 4xx/5xx
-
-        dados = response_api.json()
         
-        return dados
+        return response_api.json()
 
     except requests.exceptions.Timeout:
         print("Erro: A requisição para a API externa excedeu o tempo limite.")

@@ -145,7 +145,6 @@ p, li, .skills, label, span{
 .level {
     background: #5555ef47;
     width: fit-content;
-    margin: 0px 20px;
     padding: 6px 12px;
     border-radius: 5px;
 }
@@ -161,33 +160,45 @@ p, li, .skills, label, span{
     50% { border-image-source: linear-gradient(90deg, purple, rgb(25, 0, 255), red, yellow, green, rgb(0, 225, 255)); } /* Invertendo/mudando a ordem para animar */
     100% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
 }
+.item-information-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0px 30px;
+
+}
 .information-container {
     background-color: #d8d8e17a;
-    width:auto;
+    width: auto;
     max-width: fit-content;
     padding: 10px 15px;
-    padding-right: 65px;
     border-radius: 5px;
     margin-top: 6px;
+    flex-wrap: wrap;
+    display:flex;
+    flex-direction: column;
 }
-.information-container span {
-    margin-right: 50px;
+.status-level {
+    display: inline-flex;
+    flex-direction: row;
+    overflow-wrap: break-word;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 8px;
 }
-span {
-    flex-wrap: revert-layer;
-    overflow-wrap: normal;
-    word-break: normal;
-    white-space: nowrap;
-}
+
 .list-item {
     display:flex;
     flex-direction: column;
 }
 .title-list-item {
-    display:flex;
     flex-direction: row;
     align-items: center;
+    word-break: auto-phrase;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
+
 button.btn {
     align-self:flex-end;
     transition: transform 0.2s ease;
@@ -198,7 +209,6 @@ button.btn:active{
 .status-studying {
     background: #ffc43ad6;
     width: fit-content;
-    margin: 0px 20px;
     padding: 6px 12px;
     border-radius: 5px;
 }
@@ -206,7 +216,6 @@ button.btn:active{
 .status-complete {
     background: #4fff6dc4;
     width: fit-content;
-    margin: 0px 20px;
     padding: 6px 12px;
     border-radius: 5px;
 }

@@ -10,23 +10,35 @@
         <li class="list-item">
             <div class="title-list-item">
                 <strong>{{item.name}}</strong>
-                <div class="level">{{item.level}}</div>
-                <div class="{{academic_training_status_class}}">
-                    {{academic_training_status}}
+                <div class="status-level">
+                    <div class="level">{{item.level}}</div>
+                    <div class="{{academic_training_status_class}}">
+                        {{academic_training_status}}
+                    </div>
                 </div>
- 
             </div>
-            <div class="information-container">
-                <span><strong>Instituição: </strong> {{item.institution}} </span><br>
-                <span><strong>Localização: </strong> {{item.address}} </span><br>
-                <span><strong>Início: </strong> {{item.start_date}} </span>
-                <span><strong>Fim: </strong> 
-                    {% if item.end_date %} 
-                        {{item.end_date}} 
-                    {% else %}
-                        Cursando
-                    {% endif %}
-                </span>
+            <div>
+                <div class="information-container">
+                    <div class="item-information-container">
+                        <span><strong>Instituição: </strong> {{item.institution}} </span>
+                        <span><strong>Localização: </strong> {{item.address}} </span><br>
+                    </div>
+                    <div class="item-information-container">
+                        <span><strong>Início: </strong> {{item.start_date}} </span>
+                        <span><strong>Fim: </strong> 
+                            {% if item.end_date %} 
+                                {{item.end_date}} 
+                            {% else %}
+                                Cursando
+                            {% endif %}
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <span>
+                        Ver mais
+                    </span>
+                <div>
             </div>
         </li>
     </ul>

@@ -1,18 +1,6 @@
-<link href="/static/style.css" rel="stylesheet"> 
-
-<div>
-    <ul class='project-list'>
-        <li class="list-item">
-            <div class="title-list-item">
-                <strong>{{name}}</strong>
-                <div class="level">{{level}}</div>
-            </div>
-            <div class="information-container">
-                <span><strong>{{institution_title}}: </strong> {{institution}} </span><br>
-                <span><strong>{{location_title}}: </strong> {{location}} </span><br>
-                <span><strong>{{start_date_title}}: </strong> {{start_date}} </span>
-                <span><strong>{{end_date_title}}: </strong> {{end_date}} </span>
-            </div>
-        </li>
-    </ul>
-</div>
+<section class="section">
+    <h2>Formação Acadêmica</h2> 
+    {% for item in academic_trainings %} 
+        {% include 'academic_training_item.html' %}
+    {% endfor %}
+</section>

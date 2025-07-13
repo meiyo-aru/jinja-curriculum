@@ -1,0 +1,33 @@
+{% if item.end_date %}
+    {% set academic_training_status_class = "status-complete" %}
+    {% set academic_training_status = "Completo" %}
+{% else %}
+    {% set academic_training_status_class = "status-studying" %}
+    {% set academic_training_status = "Cursando" %}
+{% endif %}
+<div>
+    <ul class='project-list'>
+        <li class="list-item">
+            <div class="title-list-item">
+                <strong>{{item.name}}</strong>
+                <div class="level">{{item.level}}</div>
+                <div class="{{academic_training_status_class}}">
+                    {{academic_training_status}}
+                </div>
+ 
+            </div>
+            <div class="information-container">
+                <span><strong>Instituição: </strong> {{item.institution}} </span><br>
+                <span><strong>Localização: </strong> {{item.address}} </span><br>
+                <span><strong>Início: </strong> {{item.start_date}} </span>
+                <span><strong>Fim: </strong> 
+                    {% if item.end_date %} 
+                        {{item.end_date}} 
+                    {% else %}
+                        Cursando
+                    {% endif %}
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>

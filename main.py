@@ -19,7 +19,10 @@ async def head_root():
 async def serve_main_html(people_id: int = 1, language: str="pt"):
     try:
         url = url_api + "/get?people_id=" + str(people_id)
+        start = time.time()
         response = await get_data_external_api(url)
+        end = time.time()
+        print("tempo requisição: " + str(end - start))
                 
         start = time.time()
         template = env.get_template("index.html") # load the index.html jinja2 template
@@ -35,7 +38,7 @@ async def serve_main_html(people_id: int = 1, language: str="pt"):
             positions = response.get("positions"), 
             name = response.get("name"),
             # academic_trainings template
-            academic_trainings = response.get("academic_trainings"),
+            academic_trainings = response.get("academic_trainings")
         )
         end = time.time()
 

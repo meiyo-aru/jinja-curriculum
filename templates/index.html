@@ -11,79 +11,8 @@
 
 </head>
 <body>
- 
-    <div id="header-container"></div>
-    <div id="language-switcher-container"></div>
-    <div id="about-me-container"></div>
-    <div id="academic-training-container"></div>
-
-    <script>
-    
-        window.onload = function() {
-            header();
-            about_me();
-            language();
-            academic_training();
-            document.title = 'Currículo de ' + peopleName;
-        }
-
-
-
-
-
-        async function header(id, language){
-            fetch('https://curriculum-render-api.onrender.com/get/header?')
-            .then(response => {
-                if (!response.ok) throw new Error('Erro na requisição GET /get/about_me');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
-        }
-        async function about_me(){
-            fetch('https://curriculum-render-api.onrender.com/get/about_me?')
-            .then(response => {
-                if (!response.ok) throw new Error('Erro na requisição GET /get/about_me');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('about-me-container').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
-        }
-        async function language(){
-            fetch('https://curriculum-render-api.onrender.com/get/language?')
-            .then(response => {
-                if (!response.ok) throw new Error('Erro na requisição GET /get/about_me');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('language-switcher-container').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
-        }
-        async function academic_training(){
-            fetch('https://curriculum-render-api.onrender.com/get/academic_training?')
-            .then(response => {
-                if (!response.ok) throw new Error('Erro na requisição GET /get/about_me');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('academic-training-container').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
-        }
-
-    </script>
+{% include 'header.html' %}
+{% include 'about_me.html' %}
+{% include 'academic_training.html' %}
 </body>
 </html>

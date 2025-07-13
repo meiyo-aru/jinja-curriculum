@@ -195,3 +195,18 @@ button.btn {
 button.btn:active{
     transform: scale(0.85);
 }
+.status-studying {
+    background: #ffc43ad6;
+    width: fit-content;
+    margin: 0px 20px;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+.status-complete {
+    background: #4fff6dc4;
+    width: fit-content;
+    margin: 0px 20px;
+    padding: 6px 12px;
+    border-radius: 5px;
+}

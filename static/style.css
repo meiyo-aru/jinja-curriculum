@@ -1,41 +1,5 @@
-@media only screen  and (min-width: 1440px){
-    body {
-        margin: 0;
-        padding: 20px;
-        padding-left: 30vw;
-        padding-right: 30vw;
-        background-color: #d5e2f0;
-        color: #333;
-    }
-}
-@media only screen  and (min-width: 768px) and (max-width:1440px){
-    body {
-        margin: 0;
-        padding: 20px;
-        padding-left: 20vw;
-        padding-right: 20vw;
-        background-color: #d5e2f0;
-        color: #333;
-    }
-}
-@media only screen and (min-width: 425px) and (max-width:768px) {
-    body {
-        margin: 0;
-        padding: 20px;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        background-color: #d5e2f0;
-        color: #333;
-    }
-}
-@media only screen and (max-width:425px) {
-    body {
-        font-size: smaller;
-        margin: 0;
-        padding-top: 20px;
-        background-color: #d5e2f0;
-        color: #333;
-    }
+html {
+    font-size: 62.5%;
 }
 
 body {
@@ -43,24 +7,30 @@ body {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
+    font-size: 1.6rem;
 }
 
 header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
     background: linear-gradient(150deg, #8000ff, #00ffd0);
     color: white;
     padding: 20px;
     border-radius: 8px;
 }
+p {
+    text-align: justify;
+}
 h1 {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 1.8em;
+}
+h3 {
+    margin: 0px;
+    font-weight:400;
 }
 .contact-info {
     margin: 10px 0;
-    font-size: 1.1em;
 }
 .contact-info a {
     color: white;
@@ -90,7 +60,6 @@ h1 {
     border-bottom: 2px solid #ffffff;
 }
 h2 {
-    font-size: 1.1em;
     color: #8000ff; 
     border-bottom: 2px solid #8000ff;
     padding-bottom: 5px;
@@ -99,7 +68,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
-    font-size: 0.7em;
 }
 .skill {
     width: 30%;
@@ -127,7 +95,6 @@ h2 {
 footer {
     text-align: center;
     margin-top: 20px;
-    font-size: 0.9em;
     color: #777;
 }
 .project-list {
@@ -149,9 +116,7 @@ footer {
 .language:hover {
     cursor: pointer;
 }
-p, li, .skills, label, span{
-    font-size: 0.8em;
-}
+
 .level {
     background: #5555ef47;
     width: fit-content;
@@ -161,9 +126,9 @@ p, li, .skills, label, span{
 #positions {
     color: white;
     margin-top: 0px;
-    font-size: larger;
     border-image: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)) 1;
     animation: animateBorderGradient 2s ease infinite;
+    border-bottom: 3px solid;
 }
 @keyframes animateBorderGradient {
     0% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
@@ -173,100 +138,9 @@ p, li, .skills, label, span{
 
 .see-more-container {
     width: 0px;
-    height: 24px;
-    padding: 2px 0px;
+    height:31px;
+    padding: 0px 0px;
     position: relative;
-}
-@media (min-width: 768px) {
-    .academic-training-container {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .see-more {
-        width: max-content;
-        height: max-content;
-        background-color: #8c97cd;
-        padding: 5px 18px 5px 30px;
-        border-radius: 0px 10px 10px 0px;
-        position: absolute;
-        right: -15px;
-        margin-top: 5px;
-        z-index: 0;
-        color: white;
-        transition: right 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-        cursor: pointer;
-    }
-    .information-container  div{
-        display: inline-flex;
-        flex-wrap: wrap;
-        gap: 0px 30px;
-    
-    }
-    .information-container {
-        background-color: #e2e2eb;
-        width: auto;
-        max-width: fit-content;
-        padding: 10px 15px;
-        border-radius: 5px;
-        flex-wrap: wrap;
-        display: inline-flex;
-        z-index: 1;
-    }
-    .resume-information-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 0px 30px;
-    }
-    .about-container {
-    
-    }
-}
-@media (max-width: 768px) {
-    .academic-training-container {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .see-more {
-        width: max-content;
-        height: max-content;
-        background-color: #8c97cd;
-        padding: 5px 15px;
-        border-radius: 10px;
-        position: absolute;
-        margin-top: 5px;
-        z-index: 1;
-        color: white;
-        transition: right 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-        cursor: pointer;
-    }
-    .information-container  div{
-        display: inline-flex;
-        flex-wrap: wrap;
-        gap: 0px 30px;
-    
-    }
-    .information-container {
-        background-color: #e2e2eb;
-        width: auto;
-        max-width: fit-content;
-        padding: 10px 15px;
-        border-radius: 5px;
-        flex-wrap: wrap;
-        display: inline-flex;
-        z-index: 1;
-    }
-    .resume-information-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 0px 30px;
-    }
-    .about-container {
-    
-    }
 }
 .status-level {
     display: inline-flex;
@@ -310,4 +184,224 @@ button.btn:active{
     width: fit-content;
     padding: 6px 12px;
     border-radius: 5px;
+}
+
+
+
+@media (min-width: 768px) {
+    .academic-training-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .information-container {
+        background-color: #e2e2eb;
+        width: auto;
+        max-width: fit-content;
+        padding: 10px 15px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: inline-flex;
+        z-index: 1;
+    }
+    .resume-information-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px 30px;
+        flex-direction: column;
+
+    }
+    .resume-information-container div{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px 30px;
+        flex-direction: row;
+
+    }
+    
+
+}
+@media (max-width: 768px) {
+    .academic-training-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .see-more {
+        width: max-content;
+        height: max-content;
+        background-color: #8c97cd;
+        padding: 5px 15px;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 1;
+        color: white;
+        transition: right 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        cursor: pointer;
+    }
+
+    .information-container {
+        background-color: #e2e2eb;
+        width: auto;
+        max-width: fit-content;
+        padding: 10px 15px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: inline-flex;
+        z-index: 1;
+    }
+      .resume-information-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px 30px;
+        flex-direction: column;
+    }
+    
+
+}
+@media only screen  and (min-width: 1440px) and (max-width: 1920px){
+    .see-more {
+        width: max-content;
+        height: max-content;
+        background-color: #8c97cd;
+        padding: 5px 18px 5px 30px;
+        border-radius: 0px 10px 10px 0px;
+        position: absolute;
+        right: -15px;
+        margin-top: 5px;
+        z-index: 0;
+        color: white;
+        transition: right 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        cursor: pointer;
+    }
+    body {
+        font-size: larger;
+        margin: 0px;
+        padding: 20px 20vw;
+        background-color: #d5e2f0;
+        color: #333;
+    }
+    .section {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 3.8rem; 
+    }
+    h2 {
+        font-size: 2rem; 
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.6rem; 
+    }
+    span {
+        font-size: 1.5rem;
+    }
+}
+@media only screen  and (min-width: 768px) and (max-width:1440px){
+    .section {
+        padding: 25px;
+    }
+    body {
+        font-size: larger;
+        margin: 0px;
+        padding: 20px 12vw;
+        background-color: #d5e2f0;
+        color: #333;
+    }
+    h1 {
+        font-size: 3.8rem; 
+    }
+    h2 {
+        font-size: 2.2rem; 
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.7rem; 
+    }
+    span {
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (min-width: 425px) and (max-width:768px) {
+    body {
+        font-size:larger;
+        margin: 0px;
+        padding: 0px;
+        padding: 1vw;
+        background-color: #d5e2f0;
+        color: #333;
+    }
+    h1 {
+        font-size: 3.7rem; 
+    }
+    h2 {
+        font-size: 2.2rem; 
+    }
+    h3 {
+        font-size: 1.9rem;
+    }
+    p {
+        font-size: 1.8rem; 
+    }
+    span {
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (max-width:425px) {
+    body {
+        font-size:1.2em;
+        margin: 0px;
+        padding: 0px;
+        background-color: #d5e2f0;
+        color: #333;
+    }
+    h1 {
+        font-size: 2.6rem; 
+    }
+    h2 {
+        font-size: 1.6rem; 
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.5rem; 
+    }
+    span {
+        font-size: 1.4rem;
+    }
+
+    .section {
+        border-radius: 0px;
+        margin: 0px;
+        padding: 15px 0px;
+        box-shadow: none;
+    }
+    header {
+        border-radius: 0px;
+        margin: 0px;
+    }
+    .section h2, .section p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+.about-container {
+    max-height: 0px;
+    max-width: 0px;
+    overflow: hidden;
+    opacity: 0;
+    padding: 15px 0px;
+    text-align: justify;
+    transition: max-height 1s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%), 
+    max-width 1s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%),
+    opacity 0.2s linear;
 }

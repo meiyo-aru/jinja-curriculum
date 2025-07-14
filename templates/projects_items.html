@@ -1,9 +1,9 @@
 {% if item.end_date %}
-    {% set academic_training_status_class = "status-complete" %}
-    {% set academic_training_status = "Completo" %}
+    {% set project_status_class = "status-complete" %}
+    {% set project_status = "Completo" %}
 {% else %}
-    {% set academic_training_status_class = "status-studying" %}
-    {% set academic_training_status = "Cursando" %}
+    {% set project_status_class = "status-studying" %}
+    {% set project_status = "Em desenvolvimento" %}
 {% endif %}
 <div>
     <ul class='project-list'>
@@ -11,10 +11,9 @@
             <div class="title-list-item">
                 <strong><h3>{{item.name}}</h3></strong>
                 <div class="status-level">
-                    <div class="level"><span>{{item.level}}</span></div>
-                    <div class="{{academic_training_status_class}}">
+                    <div class="{{project_status_class}}">
                         <span>
-                            {{academic_training_status}}
+                            {{project_status}}
                         </span>
                     </div>
                 </div>
@@ -23,8 +22,14 @@
                 <div class="information-container">
                     <div class="resume-information-container">
                         <div>
-                            <span><strong>Instituição: </strong> {{item.institution}} </span>
-                            <span><strong>Localização: </strong> {{item.address}} </span><br>
+                            <span>
+                                <strong>Tags: </strong>
+                            </span>
+                            {% for tag in item.tags.split(',') %}  
+                                <span class="tag">
+                                    {{tag}}
+                                </span>
+                            {% endfor %}
                         </div>
                         <div>
                             <span><strong>Início: </strong> {{item.start_date}} </span>
@@ -32,7 +37,7 @@
                                 {% if item.end_date %} 
                                     {{item.end_date}} 
                                 {% else %}
-                                    Cursando
+                                    Em desenvolvimento
                                 {% endif %}
                             </span>
                         </div>

@@ -1,29 +1,24 @@
-{% if item.end_date %}
-    {% set academic_training_status_class = "status-complete" %}
-    {% set academic_training_status = "Completo" %}
-{% else %}
-    {% set academic_training_status_class = "status-studying" %}
-    {% set academic_training_status = "Cursando" %}
-{% endif %}
+
 <div>
     <ul class='project-list'>
         <li class="list-item">
             <div class="title-list-item">
                 <strong><h3>{{item.name}}</h3></strong>
                 <div class="status-level">
-                    <div class="level"><span>{{item.level}}</span></div>
-                    <div class="{{academic_training_status_class}}">
-                        <span>
-                            {{academic_training_status}}
-                        </span>
-                    </div>
+                    {% if not item.end_date %}
+                        <div class="status-complete">
+                            <span>
+                                Atualmente
+                            </span>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
             <div class="academic-training-container">
                 <div class="information-container">
                     <div class="resume-information-container">
                         <div>
-                            <span><strong>Instituição: </strong> {{item.institution}} </span>
+                            <span><strong>Empresa: </strong> {{item.enterprise}} </span>
                             <span><strong>Localização: </strong> {{item.address}} </span><br>
                         </div>
                         <div>
@@ -32,7 +27,7 @@
                                 {% if item.end_date %} 
                                     {{item.end_date}} 
                                 {% else %}
-                                    Cursando
+                                    Atualmente
                                 {% endif %}
                             </span>
                         </div>

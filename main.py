@@ -8,7 +8,10 @@ from external_api import get_data_external_api
 
 url_api = "https://curriculum-data-api.onrender.com" # url of data-api
 
-env = Environment(loader = FileSystemLoader('templates')) # search templates in /templates
+env = Environment(
+    loader = FileSystemLoader('templates'),
+    autoescape=True
+) # search templates in /templates
 app.mount("/static", StaticFiles(directory="static"), name="static") # mount 'static' directory for give static archives (css, js)
 
 @app.head("/", status_code = status.HTTP_200_OK) # endpoint for check api status
@@ -32,8 +35,6 @@ async def serve_main_html(people_id: int = 1, language: str="pt"):
         
         # if not a Response, assume are JSON (Dict)
         response: Dict[str, Any] = response_from_api 
-        
-    
         start = time.time()
         template = env.get_template("index.html") # load the index.html jinja2 template
         html = template.render(
@@ -48,7 +49,9 @@ async def serve_main_html(people_id: int = 1, language: str="pt"):
             positions = response.get("positions"), 
             name = response.get("name"),
             # academic_trainings template
-            academic_trainings = response.get("academic_trainings")
+            academic_trainings = response.get("academic_trainings"),
+            experiences = response.get("experiences"),
+            projects = response.get("projects_rel")
         )
         end = time.time()
 

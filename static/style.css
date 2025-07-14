@@ -27,7 +27,7 @@ h1 {
 }
 h3 {
     margin: 0px;
-    font-weight:400;
+    font-weight:600;
 }
 .contact-info {
     margin: 10px 0;
@@ -105,7 +105,7 @@ footer {
 }
 .project-list li {
     background: #f8f9fa;
-    padding: 10px;
+    padding: 10px 13px;
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
@@ -173,7 +173,7 @@ button.btn:active{
     transform: scale(0.85);
 }
 .status-studying {
-    background: #ffc43ad6;
+    background: #ffbd9f;
     width: fit-content;
     padding: 6px 12px;
     border-radius: 5px;
@@ -254,7 +254,7 @@ button.btn:active{
       .resume-information-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 0px 30px;
+        gap: 10px 30px;
         flex-direction: column;
     }
     
@@ -368,7 +368,7 @@ button.btn:active{
         font-size: 1.6rem; 
     }
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     p {
         font-size: 1.5rem; 
@@ -393,7 +393,19 @@ button.btn:active{
     }
 
 }
-
+.tag {
+    background: #c7c7d5;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px 8px;
+    justify-content: left;
+}
 .about-container {
     max-height: 0px;
     max-width: 0px;

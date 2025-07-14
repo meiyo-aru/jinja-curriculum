@@ -1,4 +1,14 @@
-@media (min-width: 1000px) {
+@media only screen  and (min-width: 1440px){
+    body {
+        margin: 0;
+        padding: 20px;
+        padding-left: 30vw;
+        padding-right: 30vw;
+        background-color: #d5e2f0;
+        color: #333;
+    }
+}
+@media only screen  and (min-width: 768px) and (max-width:1440px){
     body {
         margin: 0;
         padding: 20px;
@@ -8,7 +18,7 @@
         color: #333;
     }
 }
-@media only screen and (min-width: 500px) and (max-width:1000px) {
+@media only screen and (min-width: 425px) and (max-width:768px) {
     body {
         margin: 0;
         padding: 20px;
@@ -18,7 +28,7 @@
         color: #333;
     }
 }
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:425px) {
     body {
         font-size: smaller;
         margin: 0;
@@ -160,22 +170,103 @@ p, li, .skills, label, span{
     50% { border-image-source: linear-gradient(90deg, purple, rgb(25, 0, 255), red, yellow, green, rgb(0, 225, 255)); } /* Invertendo/mudando a ordem para animar */
     100% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
 }
-.item-information-container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 0px 30px;
 
+.see-more-container {
+    width: 0px;
+    height: 24px;
+    padding: 2px 0px;
+    position: relative;
 }
-.information-container {
-    background-color: #d8d8e17a;
-    width: auto;
-    max-width: fit-content;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-top: 6px;
-    flex-wrap: wrap;
-    display:flex;
-    flex-direction: column;
+@media (min-width: 768px) {
+    .academic-training-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .see-more {
+        width: max-content;
+        height: max-content;
+        background-color: #8c97cd;
+        padding: 5px 18px 5px 30px;
+        border-radius: 0px 10px 10px 0px;
+        position: absolute;
+        right: -15px;
+        margin-top: 5px;
+        z-index: 0;
+        color: white;
+        transition: right 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        cursor: pointer;
+    }
+    .information-container  div{
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0px 30px;
+    
+    }
+    .information-container {
+        background-color: #e2e2eb;
+        width: auto;
+        max-width: fit-content;
+        padding: 10px 15px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: inline-flex;
+        z-index: 1;
+    }
+    .resume-information-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0px 30px;
+    }
+    .about-container {
+    
+    }
+}
+@media (max-width: 768px) {
+    .academic-training-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .see-more {
+        width: max-content;
+        height: max-content;
+        background-color: #8c97cd;
+        padding: 5px 15px;
+        border-radius: 10px;
+        position: absolute;
+        margin-top: 5px;
+        z-index: 1;
+        color: white;
+        transition: right 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        cursor: pointer;
+    }
+    .information-container  div{
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0px 30px;
+    
+    }
+    .information-container {
+        background-color: #e2e2eb;
+        width: auto;
+        max-width: fit-content;
+        padding: 10px 15px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: inline-flex;
+        z-index: 1;
+    }
+    .resume-information-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0px 30px;
+    }
+    .about-container {
+    
+    }
 }
 .status-level {
     display: inline-flex;
@@ -197,6 +288,7 @@ p, li, .skills, label, span{
     display: inline-flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 6px;
 }
 
 button.btn {

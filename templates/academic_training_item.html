@@ -17,25 +17,28 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="academic-training-container">
                 <div class="information-container">
-                    <div class="item-information-container">
-                        <span><strong>Instituição: </strong> {{item.institution}} </span>
-                        <span><strong>Localização: </strong> {{item.address}} </span><br>
+                    <div class="resume-information-container">
+                        <div>
+                            <span><strong>Instituição: </strong> {{item.institution}} </span>
+                            <span><strong>Localização: </strong> {{item.address}} </span><br>
+                        </div>
+                        <div>
+                            <span><strong>Início: </strong> {{item.start_date}} </span>
+                            <span><strong>Fim: </strong> 
+                                {% if item.end_date %} 
+                                    {{item.end_date}} 
+                                {% else %}
+                                    Cursando
+                                {% endif %}
+                            </span>
+                        </div>
                     </div>
-                    <div class="item-information-container">
-                        <span><strong>Início: </strong> {{item.start_date}} </span>
-                        <span><strong>Fim: </strong> 
-                            {% if item.end_date %} 
-                                {{item.end_date}} 
-                            {% else %}
-                                Cursando
-                            {% endif %}
-                        </span>
-                    </div>
+                    <div class="about-container">teste</div>
                 </div>
-                <div>
-                    <span>
+                <div class="see-more-container">
+                    <span class="see-more">
                         Ver mais
                     </span>
                 <div>

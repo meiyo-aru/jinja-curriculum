@@ -4,17 +4,22 @@
         <li class="list-item">
             <div class="title-list-item">
                 <strong><h3>{{item.name}}</h3></strong>
-                <div class="status-level">
+                <div class="status">
                     {% if not item.end_date %}
-                        <div class="status-complete">
+                        <div class="status-complete" title="Atualmente estou empregado aqui">
                             <span>
                                 Atualmente
                             </span>
-                        </div>
+                        </div>                       
                     {% endif %}
+                        <div class="experience-position" title="Cargo ocupado na empresa">
+                            <span>
+                                {{item.position}}
+                            </span>
+                        </div>
                 </div>
             </div>
-            <div class="academic-training-container">
+            <div class="container-responsive">
                 <div class="information-container">
                     <div class="resume-information-container">
                         <div>

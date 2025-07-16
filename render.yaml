@@ -2,7 +2,31 @@ services:
   - type: web
     name: curriculum_data_api
     runtime: python     
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      echo "Instalando dependências Python..."
+      pip install -r requirements.txt
+
+      echo "Instalando Node.js e NPM para compilação SCSS..."
+      # Instala NVM (Node Version Manager) para gerenciar versões do Node
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+      [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+      
+      # Instala uma versão específica do Node.js
+      nvm install 20 # Ou a versão que você preferir, por exemplo, 18 ou 22
+      nvm use 20
+
+      echo "Compilando SCSS..."
+      cd static/frontend # Mude para a pasta onde está seu package.json e arquivos SCSS
+      npm install        # Instala as dependências, incluindo o 'sass'
+      npm run build-scss # Executa o script de build do SCSS definido no package.json
+      cd ../..           # Volta para a raiz do projeto
+
+      npm install -g sass 
+      sass static/scss:static/css
+
+      echo "Build completo."
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     branch: main
     plan: free

@@ -1,0 +1,18 @@
+<section class="section">
+    <h2>Habilidades</h2> 
+    <div class="skills">
+        {% for item in skills %} 
+            <style>
+                .percentage {
+                    width: {{item.percent_level}}%;
+                }
+            </style>
+            <div class="skills-item">
+                <span><strong>{{item.name}} </strong>{{item.level}}</span>
+                <div class="percentage-bar">
+                    <div class="percentage"><span>{{item.percent_level}}%</span></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

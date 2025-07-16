@@ -1,0 +1,23 @@
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    @media only screen and (min-width: 728px) {
+        gap: 10px;
+    }
+}
+
+.column {
+    @extend .flex-container;
+    flex-direction: column;
+}
+
+.row {
+    @extend .flex-container;
+    flex-direction: row;
+}
+
+.center {
+    justify-content: center;
+}
+

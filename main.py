@@ -51,7 +51,9 @@ async def serve_main_html(people_id: int = 1, language: str="pt"):
             # academic_trainings template
             academic_trainings = response.get("academic_trainings"),
             experiences = response.get("experiences"),
-            projects = response.get("projects_rel")
+            projects = response.get("projects_rel"),
+            skills = response.get("skills"),
+            languages = response.get("langs")
         )
         end = time.time()
 

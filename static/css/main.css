@@ -1,0 +1,145 @@
+html {
+  font-size: 62.5%;
+}
+
+p {
+  text-align: justify;
+}
+
+h1 {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 0px;
+  font-weight: 600;
+}
+
+h2 {
+  color: #8000ff;
+  border-bottom: 2px solid #8000ff;
+  padding-bottom: 5px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.6rem;
+  background-color: #d5e2f0;
+  color: #333;
+}
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+  body {
+    padding: 15px 20vw;
+  }
+}
+@media only screen and (min-width: 728px) and (max-width: 1440px) {
+  body {
+    padding: 10px 15vw;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 728px) {
+  body {
+    padding: 5px 2vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+  body {
+    padding: 0px 0vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  span {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 728px) and (max-width: 1440px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.7rem;
+  }
+  span {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  h1 {
+    font-size: 3.7rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.9rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  span {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  span {
+    font-size: 1.4rem;
+  }
+}
+.flex-container, .row, .column {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 728px) {
+  .flex-container, .row, .column {
+    gap: 10px;
+  }
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+}
+
+/*# sourceMappingURL=main.css.map */

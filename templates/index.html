@@ -7,16 +7,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link href="/static/style.css" rel="stylesheet"> 
+    <link href="/static/css/main.css" rel="stylesheet"> 
 
 </head>
 <body>
-{% include 'header.html' %}
-{% include 'about_me.html' %}
-{% include 'academic_training.html' %}
-{% include 'experience.html' %}
-{% include 'projects.html' %}
-
-<script src="/static/script.js"></script>
+    <div class="container-responsive">
+        <div class="side-a">
+            <div class="container-column">
+                {% include 'header.html' %}
+                {% include 'about_me.html' %}
+                {% include 'academic_training.html' %}
+                {% include 'experience.html' %}
+                {% include 'projects.html' %}
+            </div>
+        </div>
+        <div class="side-b">
+            {% include 'technical_skills.html' %}
+            {% include 'languages.html' %}
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
 </body>
 </html>

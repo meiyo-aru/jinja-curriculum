@@ -1,18 +1,31 @@
-<section class="section">
+<section class="card">
     <h2>Habilidades</h2> 
-    <div class="skills">
-        {% for item in skills %} 
-            <style>
-                .percentage {
-                    width: {{item.percent_level}}%;
-                }
-            </style>
-            <div class="skills-item">
-                <span><strong>{{item.name}} </strong>{{item.level}}</span>
-                <div class="percentage-bar">
-                    <div class="percentage"><span>{{item.percent_level}}%</span></div>
+    <div class="content">
+        <div class="list column sm-gap">
+            {% for item in skills %} 
+                <style>
+                    #percentage-{{item.id}} {
+                        width: {{item.percent_level}}%;
+                    }
+                </style>
+                <div class="column sm-gap card bg-light hover-shadow">
+                    <span class="row lg-gap space-between">
+                        <strong>
+                            <h5>
+                                {{item.name}} 
+                            </h5>
+                        </strong>
+                        <div class="sm-card lg-rounded bg-purple" title="Nível de proficiência, do básico ao avançado.">
+                            <h5>
+                                {{item.level}}
+                            </h5>
+                        </div>
+                    </span>
+                    <div class="percentage-bar" title="Nível de proficiência, quanto maior melhor.">
+                        <div id="percentage-{{item.id}}" class="percentage"></div>
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </section>

@@ -1,6 +1,8 @@
-<section class="section">
+<section class="card">
     <h2>Projetos</h2> 
-    {% for item in projects %} 
-        {% include "projects_items.html" %}
-    {% endfor %}
+    <ul class="list column">
+        {% for item in projects %} 
+            {% include "projects_items.html" %}
+        {% endfor %}
+    </ul>
 </section>

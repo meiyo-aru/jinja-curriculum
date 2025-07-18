@@ -1,57 +1,50 @@
 {% if item.end_date %}
-    {% set academic_training_status_class = "status-complete" %}
+    {% set academic_training_status_class = "bg-green" %}
     {% set academic_training_status = "Completo" %}
 {% else %}
-    {% set academic_training_status_class = "status-studying" %}
+    {% set academic_training_status_class = "bg-orange" %}
     {% set academic_training_status = "Cursando" %}
 {% endif %}
-<div>
-    <ul class='project-list'>
-        <li class="list-item">
-            <div class="title-list-item">
-                <strong><h3>{{item.name}}</h3></strong>
-                <div class="status">
-                    <div class="level" title="Nível de Graduação ou Pós-Graduação">
-                        <span>{{item.level}}</span>
-                    </div>
-                    <div class="{{academic_training_status_class}}" title="O estado atual do curso (Completo ou Cursando)">
-                        <span>
-                            {{academic_training_status}}
-                        </span>
-                    </div>
-                </div>
+<li class="card column gap bg-light">
+    <div class="row flex gap">
+        <strong><h3>{{item.name}}</h3></strong>
+        <div class="row flex lg-gap">
+            <div class="sm-card bg-light-blue" title="Nível de Graduação ou Pós-Graduação">
+                <span>{{item.level}}</span>
             </div>
-            <div class="container-responsive">
-                <div class="information-container">
-                    <div class="resume-information-container">
-                        <div>
-                            <span><strong>Instituição: </strong> {{item.institution}} </span>
-                            <span><strong>Localização: </strong> {{item.address}} </span><br>
-                        </div>
-                        <div>
-                            <span><strong>Início: </strong> {{item.start_date}} </span>
-                            <span><strong>Fim: </strong> 
-                                {% if item.end_date %} 
-                                    {{item.end_date}} 
-                                {% else %}
-                                    Cursando
-                                {% endif %}
-                            </span>
-                        </div>
-                    </div>
-                    <div class="about-container">
-                        <span>
-                            <strong>Sobre:</strong>
-                            {{ item.about }}
-                        </span>
-                    </div>
+            <div class="sm-card {{academic_training_status_class}}" title="O estado atual do curso (Completo ou Cursando)">
+                <span>
+                    {{academic_training_status}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="responsive-row">
+        <div class="content sm-rounded bg-light-grey">
+            <div class="column sm-gap">
+                <div class="row flex lg-gap">
+                    <span><strong>Instituição: </strong> {{item.institution}} </span>
+                    <span><strong>Localização: </strong> {{item.address}} </span>
                 </div>
-                <div class="see-more-container">
-                    <span class="see-more">
-                        Ver mais
+                <div class="row flex lg-gap">
+                    <span><strong>Início: </strong> {{item.start_date}} </span>
+                    <span><strong>Fim: </strong> 
+                        {% if item.end_date %} 
+                            {{item.end_date}} 
+                        {% else %}
+                            Cursando
+                        {% endif %}
                     </span>
-                <div>
+                </div>
+                <div class="expansive-container">
+                    <p><strong>Sobre: </strong>{{ item.about }}</p>
+                </div>
             </div>
-        </li>
-    </ul>
-</div>
+        </div>
+        <div id="see-more">
+            <span>
+                Ver mais
+            </span>
+        <div>
+    </div>
+</li>

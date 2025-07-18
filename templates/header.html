@@ -1,20 +1,14 @@
 <header>
     <h1>{{name}}</h1>
-    <h2 id="positions">{{positions}}</h2>
-
-    <p class="contact-info">
+    <h2 class="styled-title">{{positions}}</h2>
+    <div class="content">
         <span>Endereço: {{address}}</span><br>
-        <span>Celular: {{phone_01}}
-            {% if phone_02 %}
-            /{{phone_02}}
+        <span>Celular: {{phone_01}} |
+            {% if phone_02 %} 
+                {{phone_02}}
             {% endif %}
         </span><br>
-        <span>E-mail: </span>
-        <a href="mailTo:{{mail}}">
-            <span>{{mail}}</span>
-        </a> 
-        <span>| LinkedIn: 
-            <a href="http://{{linkedin}}">Perfil</a>
-        </span>
-    </p>
+        <span>E-mail: <a href="mailTo:{{mail}}">{{mail}}</a></span><br>
+        <span>LinkedIn: <a href="http://{{linkedin}}">Perfil</a></span>
+    </div>
 </header>

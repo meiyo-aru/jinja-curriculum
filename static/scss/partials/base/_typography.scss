@@ -1,25 +1,46 @@
-
+// general tipography classes, used when @media is not necessary 
 html {
     font-size: 62.5%;
 }
 
 p {
     text-align: justify;
+    white-space: pre-line;
+    font-weight: 200;
 }
+
 h1 {
     margin: 0px;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 h3 {
     margin: 0px;
-    font-weight:600;
+    font-weight:400;
 }
 h2 {
     color: #8000ff; 
     border-bottom: 2px solid #8000ff;
     padding-bottom: 5px;
+    font-weight: 400;
+}
+h5, span {
+    margin: 0px;
+    font-weight: 200;
 }
 
+.styled-title {
+    color: white;
+    margin-top: 0px;
+    border-image: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)) 1;
+    animation: animateBorderGradient 2s ease infinite;
+    border-bottom: 3px solid;
+}
+@keyframes animateBorderGradient {
+    0% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
+    50% { border-image-source: linear-gradient(90deg, purple, rgb(25, 0, 255), red, yellow, green, rgb(0, 225, 255)); } 
+    100% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
+}
 
 body {
     font-family: "Nunito", sans-serif;
@@ -27,64 +48,33 @@ body {
     font-weight: 200;
     font-style: normal;
     font-size: 1.6rem;
-
-    background-color: #d5e2f0;
     color: #333;
-    @media only screen and (min-width: 1440px) and (max-width: 1920px){
-        padding: 15px 20vw;
-    }
-    @media only screen and (min-width: 728px) and (max-width: 1440px){
-        padding: 10px 15vw;
-    }
-    @media only screen and (min-width: 425px) and (max-width: 728px){
-        padding: 5px 2vw;
-    }
-    @media only screen and (max-width: 425px){
-        padding: 0px 0vw;
-    }
+    background-color: #d5e2f0;
 }
 
 
-
+// @media
+@media only screen and (min-width: 1920px){
+    h1 {
+        font-size: 4rem; 
+    }
+    h2 {
+        font-size: 2.6rem; 
+    }
+    h3 {
+        font-size: 2.3rem;
+    }
+    p {
+        font-size: 2rem; 
+    }
+    span {
+        font-size: 1.9rem;
+    }
+}
 
 @media only screen and (min-width: 1440px) and (max-width: 1920px){
     h1 {
-        font-size: 3.8rem; 
-    }
-    h2 {
-        font-size: 2rem; 
-    }
-    h3 {
-        font-size: 1.8rem;
-    }
-    p {
-        font-size: 1.6rem; 
-    }
-    span {
-        font-size: 1.5rem;
-    }
-}
-@media only screen and (min-width: 728px) and (max-width: 1440px){
-    h1 {
-        font-size: 3.8rem; 
-    }
-    h2 {
-        font-size: 2.2rem; 
-    }
-    h3 {
-        font-size: 2rem;
-    }
-    p {
-        font-size: 1.7rem; 
-    }
-    span {
-        font-size: 1.7rem;
-    }
-}
-
-@media only screen and (min-width: 425px) and (max-width:768px) {
-    h1 {
-        font-size: 3.7rem; 
+        font-size: 3.6rem; 
     }
     h2 {
         font-size: 2.2rem; 
@@ -99,12 +89,47 @@ body {
         font-size: 1.7rem;
     }
 }
+@media only screen and (min-width: 728px) and (max-width: 1440px){
+    h1 {
+        font-size: 3.3rem; 
+    }
+    h2 {
+        font-size: 2.1rem; 
+    }
+    h3 {
+        font-size: 1.9rem;
+    }
+    p {
+        font-size: 1.8rem; 
+    }
+    span {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width:768px) {
+    h1 {
+        font-size: 3rem; 
+    }
+    h2 {
+        font-size: 1.9rem; 
+    }
+    h3 {
+        font-size: 1.7rem;
+    }
+    p {
+        font-size: 1.6rem; 
+    }
+    span {
+        font-size: 1.5rem;
+    }
+}
 @media only screen and (max-width:425px) {
     h1 {
         font-size: 2.6rem; 
     }
     h2 {
-        font-size: 1.6rem; 
+        font-size: 1.8rem; 
     }
     h3 {
         font-size: 1.6rem;

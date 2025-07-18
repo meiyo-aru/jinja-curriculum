@@ -1,6 +1,8 @@
-<section class="section">
-    <h2>Formação Acadêmica</h2> 
-    {% for item in academic_trainings %} 
-        {% include 'academic_training_item.html' %}
-    {% endfor %}
+<section class="card">
+    <h2>Formação Acadêmica</h2>
+    <ul class="list column">
+        {% for item in academic_trainings %} 
+            {% include 'academic_training_item.html' %}
+        {% endfor %}
+    </ul>
 </section>

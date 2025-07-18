@@ -1,3 +1,5 @@
 @use 'partials/base/typography';
 @use 'partials/layout/container';
-// @import 'partials/components/card.scss';
+@use 'partials/components/card';
+@use 'partials/components/list';
+@use 'partials/utilities/effects';

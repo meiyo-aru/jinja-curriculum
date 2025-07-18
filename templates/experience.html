@@ -1,6 +1,8 @@
-<section class="section">
+<section class="card">
     <h2>Experiências</h2> 
-    {% for item in experiences %} 
-        {% include 'experience_item.html' %}
-    {% endfor %}
+    <ul class="list column">
+        {% for item in experiences %} 
+            {% include 'experience_item.html' %}
+        {% endfor %}
+    </ul>
 </section>

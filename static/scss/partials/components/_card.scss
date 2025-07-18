@@ -1,0 +1,86 @@
+@use '../utilities/mixins';
+@use '../layout/container';
+@use '../utilities/variables';
+
+.card {
+    text-align: left;
+    @media only screen and (min-width: 729px) {
+        @include mixins.card-style($bg-color: white, $padding: 10px 18px, $radius: 5px, $with-shadow: true);
+    }
+    @media only screen and (min-width:426px) and (max-width: 728px) {
+        @include mixins.card-style($padding: 10px 15px, $radius: 5px, $with-shadow: true);
+    }
+    @media only screen and (max-width: 425px) {
+        @include mixins.card-style($padding: 10px 5px);
+    }
+}
+
+.sm-card {
+    height: max-content;
+    width: fit-content;
+    text-align: left;
+    @media only screen and (min-width: 728px) {
+        @include mixins.card-style($padding: 6px 12px, $radius: 5px);
+    }
+    @media only screen and (max-width: 728px) {
+        @include mixins.card-style($padding: 5px 10px, $radius: 5px);
+    }
+}
+
+header {
+    @extend .card;
+    color: white;
+    background: linear-gradient(150deg, #8000ff, #00ffd0);
+}
+#see-more {
+    @media only screen and (max-width: 728px) {
+        border-radius: 10px;
+    }
+    @media only screen and (min-width: 729px) {
+        width: 0px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    height:31px;
+    padding: 0px 0px;
+    position: relative;
+}
+#see-more span {
+    width: max-content;
+    height: max-content;
+    background-color: #8c97cd;
+    position: absolute;
+    margin-top: 5px;
+    z-index: 0;
+    color: white;
+    cursor: pointer;
+    transition: right 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    @media only screen and (max-width: 728px) {
+        padding: 5px 18px;
+        left: 0px;
+        border-radius: 10px;
+    }
+    @media only screen and (min-width: 729px) {
+        padding: 5px 18px 5px 30px;
+        border-radius: 0px 10px 10px 0px;
+        right: -15px;
+    }
+}
+#see-more span.active {
+    right: -90px;
+}
+#see-more span.active-clicked {
+    right: -110px;
+}
+.percentage-bar {
+    width: 98%;
+    height: 10px;
+    border-radius: 15px;
+    background-color: #c4c4c4;
+    overflow: hidden;
+}
+
+.percentage {
+    height: 100%;
+    background-color: #7b09fd;
+}

@@ -1,0 +1,68 @@
+@use './variables';
+
+@media screen and (min-width: 426px) {
+    .hover-shadow {
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+    }
+    .hover-shadow:hover {
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+    .hover-size-in {
+        transform: scale(1);
+        transition: transform 0.15s ease;
+    }
+    .hover-size-in:hover {
+        transform: scale(0.95);
+    }
+    
+    .hover-size-out {
+        transform: scale(1);
+        transition: transform 0.15s ease;
+    }
+    .hover-size-out:hover {
+        transform: scale(1.05);
+    }
+}
+
+.bg-white {
+    background-color: variables.$color-white;
+    color: rgb(20, 20, 20);
+}
+.bg-light {
+    background-color: variables.$color-light;
+    color: black;
+}
+.bg-grey {
+    background-color: variables.$color-grey;
+    color: rgb(0, 0, 0);
+}
+.bg-light-grey {
+    background-color: variables.$color-light-grey;
+    color: rgb(0, 0, 0);
+}
+.bg-light-blue {
+    background-color: #a1a6ea;
+    color: rgb(255, 255, 255);
+}
+.bg-green {
+    background-color: #95e069;
+    color: white;
+}
+.bg-orange {
+    background-color: #ff9a80;
+    color: white;
+}
+.bg-purple {
+    background-color: #9e7ee7;
+    color: white;
+}
+.sm-rounded {
+    border-radius: 5px;
+}
+.rounded {
+    border-radius: 8px;
+}
+.lg-rounded {
+    border-radius: 12px;
+}

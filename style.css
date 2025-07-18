@@ -10,13 +10,13 @@ body {
     font-size: 1.6rem;
 }
  */
-header {
+/* header {
     text-align: left;
     background: linear-gradient(150deg, #8000ff, #00ffd0);
     color: white;
     padding: 20px;
     border-radius: 8px;
-}
+} */
 /* p {
     text-align: justify;
 }
@@ -39,60 +39,62 @@ h3 {
 .contact-info a:hover {
     color: #FFD700;
 }
-.section {
+/* .card {
     background: white;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.language-section {
+} */
+/* .language-card {
     background: linear-gradient(150deg, #8000ff, #00ffd0);
     padding: 15px;
     color: white;
     margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.language-section h2 {
+} */
+/* .language-card h2 {
     color: white;
     border-bottom: 2px solid #ffffff;
-}
-h2 {
+} */
+/* h2 {
     color: #8000ff; 
     border-bottom: 2px solid #8000ff;
     padding-bottom: 5px;
-}
-
+} */
+/* 
 footer {
     text-align: center;
     margin-top: 20px;
     color: #777;
-}
-.project-list {
+} */
+
+/* .list {
     list-style-type: none;
     padding: 0;
     margin: 5px 0px;
 
 }
-.project-list li {
+.list li {
     background: #f8f9fa;
     padding: 10px 13px;
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
-}
+} */
 
 .language:hover {
     cursor: pointer;
 }
 
-.level {
+/* .level {
     background: #5555ef47;
     width: fit-content;
     padding: 6px 12px;
     border-radius: 5px;
-}
-#positions {
+} */
+
+/* #positions {
     color: white;
     margin-top: 0px;
     border-image: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)) 1;
@@ -101,11 +103,11 @@ footer {
 }
 @keyframes animateBorderGradient {
     0% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
-    50% { border-image-source: linear-gradient(90deg, purple, rgb(25, 0, 255), red, yellow, green, rgb(0, 225, 255)); } /* Invertendo/mudando a ordem para animar */
+    50% { border-image-source: linear-gradient(90deg, purple, rgb(25, 0, 255), red, yellow, green, rgb(0, 225, 255)); } 
     100% { border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)); }
-}
+} */
 
-.see-more-container {
+#see-more-container {
     width: 0px;
     height:31px;
     padding: 0px 0px;
@@ -124,7 +126,7 @@ footer {
     display:flex;
     flex-direction: column;
 }
-.title-list-item {
+/* .title-list-item {
     flex-direction: row;
     align-items: center;
     word-break: auto-phrase;
@@ -132,16 +134,16 @@ footer {
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 6px;
-}
+} */
 
-button.btn {
+/* button.btn {
     align-self:flex-end;
     transition: transform 0.2s ease;
 }
 button.btn:active{
     transform: scale(0.85);
-}
-.status-studying {
+} */
+/* .status-studying {
     background: #ffbd9f;
     width: fit-content;
     padding: 6px 12px;
@@ -154,17 +156,17 @@ button.btn:active{
     padding: 6px 12px;
     border-radius: 5px;
 }
-
+ */
 
 
 @media (min-width: 768px) {
-    .container-responsive {
+/*     .container responsive-row {
         display: flex;
         justify-content: center;
         flex-direction: row;
         gap: 20px 10px;
     }
-    .information-container {
+    .information {
         background-color: #e2e2eb;
         width: auto;
         height: auto;
@@ -176,15 +178,14 @@ button.btn:active{
         display: inline-flex;
         z-index: 1;
         transition: height 2s ease;
-    }
-    .resume-information-container {
+    } */
+/*     .resume-information {
         display: flex;
         flex-wrap: wrap;
         gap: 0px 30px;
         flex-direction: column;
-
-    }
-    .resume-information-container div{
+    } */
+    .resume-information div{
         display: flex;
         flex-wrap: wrap;
         gap: 0px 30px;
@@ -195,14 +196,14 @@ button.btn:active{
 
 }
 @media (max-width: 768px) {
-    .container-responsive {
+    .container responsive-row {
         display: flex;
         justify-content: center;
         flex-direction: column;
         gap: 6px;
     }
 
-    .see-more {
+    #see-more {
         width: max-content;
         height: max-content;
         background-color: #8c97cd;
@@ -215,7 +216,7 @@ button.btn:active{
         cursor: pointer;
     }
 
-    .information-container {
+    .information {
         background-color: #e2e2eb;
         width: auto;
         max-width: fit-content;
@@ -225,7 +226,7 @@ button.btn:active{
         display: inline-flex;
         z-index: 1;
     }
-      .resume-information-container {
+      .resume-information {
         display: flex;
         flex-wrap: wrap;
         gap: 10px 30px;
@@ -249,7 +250,7 @@ button.btn:active{
 }
 @media only screen  and (min-width: 1440px) and (max-width: 1920px){
 
-    .see-more {
+    #see-more {
         width: max-content;
         height: max-content;
         background-color: #8c97cd;
@@ -270,7 +271,7 @@ button.btn:active{
         background-color: #d5e2f0;
         color: #333;
     } */
-    .section {
+    .card {
         padding: 25px;
     }
 /*     h1 {
@@ -290,7 +291,7 @@ button.btn:active{
     } */
 }
 @media only screen  and (min-width: 768px) and (max-width:1440px){
-    .section {
+    .card {
         padding: 25px;
     }
  /*    body {
@@ -366,23 +367,23 @@ button.btn:active{
         font-size: 1.4rem;
     } */
 
-    .section {
+/*     .card {
         border-radius: 0px;
         margin: 0px;
         padding: 15px 0px;
         box-shadow: none;
-    }
+    } */
     header {
         border-radius: 0px;
         margin: 0px;
     }
-    .section h2, .section p {
+    .card h2, .card p {
         margin-left: 10px;
         margin-right: 10px;
     }
 
 }
-
+/* 
 .tag {
     background: #c7c7d5;
     width: fit-content;
@@ -395,8 +396,8 @@ button.btn:active{
     flex-wrap: wrap;
     gap: 5px 8px;
     justify-content: left;
-}
-.about-container {
+} */
+/* .expansive-container {
     max-height: 0px;
     max-width: max-content;
     overflow: hidden;
@@ -405,16 +406,16 @@ button.btn:active{
     text-align: justify;
     transition: max-height 2s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%),
     opacity 0.2s ease-in;
-}
+} */
 
-.about-container.active {
+/* .expansive-container.active {
     max-height: 300px;
     padding: 15px 0px;
 }
-
-.see-more.active {
+ */
+/* #see-more.active {
     right: -80px;
-}
+} */
 .percentage-bar {
     width: 80%;
     height: 10px;

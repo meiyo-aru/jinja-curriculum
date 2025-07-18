@@ -4,91 +4,82 @@ html {
 
 p {
   text-align: justify;
+  white-space: pre-line;
+  font-weight: 200;
 }
 
 h1 {
   margin: 0px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 h3 {
   margin: 0px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h2 {
   color: #8000ff;
   border-bottom: 2px solid #8000ff;
   padding-bottom: 5px;
+  font-weight: 400;
 }
 
+h5, span {
+  margin: 0px;
+  font-weight: 200;
+}
+
+.styled-title {
+  color: white;
+  margin-top: 0px;
+  border-image: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255)) 1;
+  animation: animateBorderGradient 2s ease infinite;
+  border-bottom: 3px solid;
+}
+
+@keyframes animateBorderGradient {
+  0% {
+    border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255));
+  }
+  50% {
+    border-image-source: linear-gradient(90deg, purple, rgb(25, 0, 255), red, yellow, green, rgb(0, 225, 255));
+  }
+  100% {
+    border-image-source: linear-gradient(90deg, red, yellow, green, rgb(0, 225, 255), purple, rgb(25, 0, 255));
+  }
+}
 body {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
   font-size: 1.6rem;
-  background-color: #d5e2f0;
   color: #333;
-}
-@media only screen and (min-width: 1440px) and (max-width: 1920px) {
-  body {
-    padding: 15px 20vw;
-  }
-}
-@media only screen and (min-width: 728px) and (max-width: 1440px) {
-  body {
-    padding: 10px 15vw;
-  }
-}
-@media only screen and (min-width: 425px) and (max-width: 728px) {
-  body {
-    padding: 5px 2vw;
-  }
-}
-@media only screen and (max-width: 425px) {
-  body {
-    padding: 0px 0vw;
-  }
+  background-color: #d5e2f0;
 }
 
+@media only screen and (min-width: 1920px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+  h3 {
+    font-size: 2.3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  span {
+    font-size: 1.9rem;
+  }
+}
 @media only screen and (min-width: 1440px) and (max-width: 1920px) {
   h1 {
-    font-size: 3.8rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.8rem;
-  }
-  p {
-    font-size: 1.6rem;
-  }
-  span {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (min-width: 728px) and (max-width: 1440px) {
-  h1 {
-    font-size: 3.8rem;
-  }
-  h2 {
-    font-size: 2.2rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1.7rem;
-  }
-  span {
-    font-size: 1.7rem;
-  }
-}
-@media only screen and (min-width: 425px) and (max-width: 768px) {
-  h1 {
-    font-size: 3.7rem;
+    font-size: 3.6rem;
   }
   h2 {
     font-size: 2.2rem;
@@ -103,12 +94,46 @@ body {
     font-size: 1.7rem;
   }
 }
+@media only screen and (min-width: 728px) and (max-width: 1440px) {
+  h1 {
+    font-size: 3.3rem;
+  }
+  h2 {
+    font-size: 2.1rem;
+  }
+  h3 {
+    font-size: 1.9rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  span {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  span {
+    font-size: 1.5rem;
+  }
+}
 @media only screen and (max-width: 425px) {
   h1 {
     font-size: 2.6rem;
   }
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   h3 {
     font-size: 1.6rem;
@@ -120,13 +145,50 @@ body {
     font-size: 1.4rem;
   }
 }
-.flex-container, .row, .column {
-  display: flex;
-  flex-wrap: wrap;
+body {
+  margin: 0px;
 }
-@media only screen and (min-width: 728px) {
-  .flex-container, .row, .column {
-    gap: 10px;
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  body {
+    padding: 15px 20vw;
+  }
+}
+@media only screen and (min-width: 729px) and (max-width: 1440px) {
+  body {
+    padding: 10px 2vw;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 728px) {
+  body {
+    padding: 5px 1vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+  body {
+    padding: 0px 0vw;
+  }
+}
+
+.container, .row, .column, .responsive-row {
+  display: flex;
+}
+
+.flex {
+  flex-wrap: wrap;
+  word-break: auto-phrase;
+}
+
+.responsive-row {
+  display: flex;
+}
+@media only screen and (min-width: 729px) {
+  .responsive-row {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .responsive-row {
+    flex-direction: column;
   }
 }
 
@@ -140,6 +202,306 @@ body {
 
 .center {
   justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.content {
+  padding: 12px 10px;
+  z-index: 5;
+}
+
+.expansive-container {
+  max-height: 0px;
+  max-width: max-content;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0px;
+  text-align: justify;
+  transition: max-height 2s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%), opacity 0.2s ease-in;
+}
+
+.expansive-container.active {
+  max-height: 600px;
+}
+
+@media only screen and (min-width: 1921px) {
+  .sm-gap {
+    gap: 5px 10px;
+  }
+  .gap {
+    gap: 8px 15px;
+  }
+  .lg-gap {
+    gap: 8px 35px;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .sm-gap {
+    gap: 5px 10px;
+  }
+  .gap {
+    gap: 8px 15px;
+  }
+  .lg-gap {
+    gap: 8px 35px;
+  }
+}
+@media only screen and (min-width: 728px) and (max-width: 1440px) {
+  .sm-gap {
+    gap: 8px 10px;
+  }
+  .gap {
+    gap: 8px 20px;
+  }
+  .lg-gap {
+    gap: 8px 30px;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .sm-gap {
+    gap: 4px 8px;
+  }
+  .gap {
+    gap: 4px 10px;
+  }
+  .lg-gap {
+    gap: 5px 12px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .sm-gap {
+    gap: 4px 6px;
+  }
+  .gap {
+    gap: 4px 10px;
+  }
+  .lg-gap {
+    gap: 5px 15px;
+  }
+  #base-container > div, #base-container {
+    gap: 0px;
+  }
+}
+.card, header {
+  text-align: left;
+}
+@media only screen and (min-width: 729px) {
+  .card, header {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 18px;
+    color: black;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  .card:hover, header:hover {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 728px) {
+  .card, header {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: black;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  .card:hover, header:hover {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@media only screen and (max-width: 425px) {
+  .card, header {
+    background-color: #f8f9fa;
+    border-radius: "10px";
+    padding: 10px 5px;
+    color: black;
+  }
+}
+
+.sm-card {
+  height: max-content;
+  width: fit-content;
+  text-align: left;
+}
+@media only screen and (min-width: 728px) {
+  .sm-card {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 6px 12px;
+    color: black;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .sm-card {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+  }
+}
+
+header {
+  color: white;
+  background: linear-gradient(150deg, #8000ff, #00ffd0);
+}
+
+#see-more {
+  height: 31px;
+  padding: 0px 0px;
+  position: relative;
+}
+@media only screen and (max-width: 728px) {
+  #see-more {
+    border-radius: 10px;
+  }
+}
+@media only screen and (min-width: 729px) {
+  #see-more {
+    width: 0px;
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+
+#see-more span {
+  width: max-content;
+  height: max-content;
+  background-color: #8c97cd;
+  position: absolute;
+  margin-top: 5px;
+  z-index: 0;
+  color: white;
+  cursor: pointer;
+  transition: right 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+@media only screen and (max-width: 728px) {
+  #see-more span {
+    padding: 5px 18px;
+    left: 0px;
+    border-radius: 10px;
+  }
+}
+@media only screen and (min-width: 729px) {
+  #see-more span {
+    padding: 5px 18px 5px 30px;
+    border-radius: 0px 10px 10px 0px;
+    right: -15px;
+  }
+}
+
+#see-more span.active {
+  right: -90px;
+}
+
+#see-more span.active-clicked {
+  right: -110px;
+}
+
+.percentage-bar {
+  width: 98%;
+  height: 10px;
+  border-radius: 15px;
+  background-color: #c4c4c4;
+  overflow: hidden;
+}
+
+.percentage {
+  height: 100%;
+  background-color: #7b09fd;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0px;
+}
+@media only screen and (min-width: 729px) {
+  .list {
+    gap: 10px 6px;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .list {
+    gap: 6px 4px;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .hover-shadow {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  .hover-shadow:hover {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  .hover-size-in {
+    transform: scale(1);
+    transition: transform 0.15s ease;
+  }
+  .hover-size-in:hover {
+    transform: scale(0.95);
+  }
+  .hover-size-out {
+    transform: scale(1);
+    transition: transform 0.15s ease;
+  }
+  .hover-size-out:hover {
+    transform: scale(1.05);
+  }
+}
+.bg-white {
+  background-color: #ffffff;
+  color: rgb(20, 20, 20);
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+.bg-grey {
+  background-color: #c0c0ce;
+  color: rgb(0, 0, 0);
+}
+
+.bg-light-grey {
+  background-color: #e2e2eb;
+  color: rgb(0, 0, 0);
+}
+
+.bg-light-blue {
+  background-color: #a1a6ea;
+  color: rgb(255, 255, 255);
+}
+
+.bg-green {
+  background-color: #95e069;
+  color: white;
+}
+
+.bg-orange {
+  background-color: #ff9a80;
+  color: white;
+}
+
+.bg-purple {
+  background-color: #9e7ee7;
+  color: white;
+}
+
+.sm-rounded {
+  border-radius: 5px;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.lg-rounded {
+  border-radius: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */

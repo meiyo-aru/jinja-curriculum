@@ -11,17 +11,15 @@
 
 </head>
 <body>
-    <div class="container-responsive">
-        <div class="side-a">
-            <div class="container-column">
-                {% include 'header.html' %}
-                {% include 'about_me.html' %}
-                {% include 'academic_training.html' %}
-                {% include 'experience.html' %}
-                {% include 'projects.html' %}
-            </div>
+    <div id="base-container" class="responsive-row lg-gap">
+        <div class="column lg-gap">
+            {% include 'header.html' %}
+            {% include 'about_me.html' %}
+            {% include 'academic_training.html' %}
+            {% include 'experience.html' %}
+            {% include 'projects.html' %}
         </div>
-        <div class="side-b">
+        <div class="column lg-gap">
             {% include 'technical_skills.html' %}
             {% include 'languages.html' %}
         </div>

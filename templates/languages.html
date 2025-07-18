@@ -1,9 +1,9 @@
-<section class="section">
+<section class="card">
     <h2>Idiomas</h2> 
-    <div class="skills">
+    <div class="list row">
         {% for item in languages %} 
-            <div class="skills-item">
-                <span><strong>{{item.name}}</strong></span>             
+            <div class="sm-card lg-rounded bg-purple">
+                <h5>{{item.name}}</h5>             
             </div>
         {% endfor %}
     </div>

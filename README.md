@@ -1,132 +1,131 @@
 # Jinja Curriculum Render
 
-Um serviço web de Renderização no Lado do Servidor (SSR) construído com **Python** e **Jinja2** para gerar currículos dinâmicos, estilizados com **SCSS**, e alimentado por uma **API RESTful** dedicada. Este projeto visa demonstrar a criação de conteúdo HTML rico e dinâmico, combinando a lógica de backend com a apresentação de frontend pré-renderizada.
+A Server-Side Rendering (SSR) web service built with **Python** and **Jinja2** to generate dynamic resumes, styled with **SCSS**, and powered by a dedicated **RESTful API**. This project aims to demonstrate the creation of rich, dynamic HTML content by combining backend logic with pre-rendered frontend presentation.
 
------
+---
 
-## Sobre o Projeto
+## About the Project
 
-O **Jinja Curriculum Render** é uma aplicação que pega dados de currículos de uma API RESTful (separada) e os injeta em templates Jinja2. O resultado é um HTML completo, com estilos aplicados via SCSS, que é enviado diretamente para o navegador do cliente. Isso garante uma experiência de usuário rápida, melhor SEO e um controle preciso sobre o design de cada currículo.
+**Jinja Curriculum Render** is an application that fetches resume data from a separate RESTful API and injects it into Jinja2 templates. The result is complete HTML, with styles applied via SCSS, which is sent directly to the client's browser. This ensures a fast user experience, improved SEO, and precise control over the design of each resume.
 
-### Tecnologias Utilizadas
+### Technologies Used
 
-  * **Python**: Linguagem de programação principal para a lógica de backend e SSR.
-  * **Jinja2**: Poderoso motor de templates para Python, permitindo a criação de HTML dinâmico com facilidade.
-  * **SCSS (Sass)**: Linguagem de pré-processamento CSS, utilizada para escrever estilos modulares, reutilizáveis e fáceis de manter.
-  * **API RESTful (Externa)**: O projeto espera se comunicar com uma API externa que fornece os dados estruturados dos currículos. Esta API é essencial para o funcionamento do gerador.
+* **Python**: Primary programming language for backend logic and SSR.
+* **Jinja2**: Powerful templating engine for Python, allowing for easy creation of dynamic HTML.
+* **SCSS (Sass)**: CSS pre-processing language, used to write modular, reusable, and easy-to-maintain styles.
+* **RESTful API (External)**: The project expects to communicate with an external API that provides structured resume data. This API is essential for the generator's functionality.
 
------
+---
 
-## Funcionalidades
+## Features
 
-  * **Renderização Dinâmica de Currículos**: Gera currículos únicos para cada usuário com base nos dados recebidos da API.
-  * **Estilização Profissional com SCSS**: Utiliza um sistema de design robusto baseado em SCSS para garantir um visual coeso e personalizável.
-  * **SSR (Server-Side Rendering)**: Melhora o desempenho inicial, SEO e a acessibilidade, pois o conteúdo HTML já chega pronto para o navegador.
-  * **Comunicação com API Externa**: Busca e exibe dados de currículos de uma fonte de dados centralizada.
+* **Dynamic Resume Rendering**: Generates unique resumes for each user based on data received from the API.
+* **Professional Styling with SCSS**: Utilizes a robust design system based on SCSS to ensure a cohesive and customizable look.
+* **SSR (Server-Side Rendering)**: Improves initial performance, SEO, and accessibility, as the HTML content arrives ready for the browser.
+* **External API Communication**: Fetches and displays resume data from a centralized data source.
 
------
+---
 
-## Primeiros Passos
+## Getting Started
 
-Para rodar este projeto localmente, siga os passos abaixo:
+To run this project locally, follow the steps below:
 
-### Pré-requisitos
+### Prerequisites
 
-Certifique-se de ter as seguintes ferramentas instaladas:
+Make sure you have the following tools installed:
 
-  * [Python 3.x](https://www.python.org/downloads/)
-  * [pip](https://pip.pypa.io/en/stable/installation/) (gerenciador de pacotes do Python)
+* [Python 3.x](https://www.python.org/downloads/)
+* [pip](https://pip.pypa.io/en/stable/installation/) (Python package manager)
 
-### Configuração
+### Setup
 
-1.  **Clone o repositório:**
+1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/blink992/jinja_curriculum_render.git
+    git clone [https://github.com/blink992/jinja_curriculum_render.git](https://github.com/blink992/jinja_curriculum_render.git)
     cd jinja_curriculum_render
     ```
 
-2.  **Crie e ative um ambiente virtual (recomendado):**
+2.  **Create and activate a virtual environment (recommended):**
 
     ```bash
-    # No Windows
+    # On Windows
     python -m venv venv
     .\venv\Scripts\activate
 
-    # No macOS/Linux
+    # On macOS/Linux
     python3 -m venv venv
     source venv/bin/activate
     ```
 
-3.  **Instale as dependências do Python:**
+3.  **Install Python dependencies:**
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Configuração da API:**
-    Este projeto espera que uma **API RESTful de currículos** esteja rodando em um endereço acessível.
+4.  **API Configuration:**
+    This project expects a **RESTful resume API** to be running at an accessible address.
 
-      * Crie um arquivo `.env` na raiz do projeto (se necessário) e defina a URL da sua API:
+    * Create a `.env` file in the project root (if necessary) and define your API's URL:
         ```
         API_URL=http://localhost:8000/api
         ```
-      * Certifique-se de que a API esteja funcionando e acessível.
+    * Ensure the API is running and accessible.
 
-### Executando a Aplicação
+### Running the Application
 
-1. **Ative o ambiente virtual:**
-   ```
-   .\venv\scripts\activate
-   ```
-3.  **Execute o servidor uvicorn:**
+1.  **Activate the virtual environment:**
+    ```
+    .\venv\scripts\activate
+    ```
+3.  **Run the Uvicorn server:**
     ```bash
     uvicorn main:app --reload --reload-dir
     ```
-4.  Abra seu navegador e acesse `http://localhost:5000` (ou a porta configurada).
+4.  Open your browser and go to `http://localhost:5000` (or the configured port).
 
------
+---
 
-## Estrutura do Projeto
+## Project Structure
 
-```
-jinja_curriculum_render/
-├── venv/                 # Ambiente virtual do Python
-├── static/               # Arquivos estáticos (CSS, JS, imagens)
-│   ├── css/              # CSS compilado do SCSS
-|   └── scss/             # Código-fonte SCSS
-|       ├── partials/     # Arquivos parciais importados pelo main.scss
+````
+
+jinja\_curriculum\_render/
+├── venv/                 \# Python virtual environment
+├── static/               \# Static files (CSS, JS, images)
+│   ├── css/              \# Compiled CSS from SCSS
+|   └── scss/             \# SCSS source code
+|       ├── partials/     \# Partial files imported by main.scss
 |       └── main.scss
-├── templates/            # Templates Jinja2
+├── templates/            \# Jinja2 templates
 │   └── index.html
-├── api.py                # Inicialização do FastAPI
-├── external_api.py       # Comunicação com a api externa
-├── main.py               # Lógica principal da aplicação Python
-├── requirements.txt      # Dependências do Python
-└── README.md             # Este arquivo
+├── api.py                \# FastAPI initialization
+├── external\_api.py       \# Communication with the external API
+├── main.py               \# Main Python application logic
+├── requirements.txt      \# Python dependencies
+└── README.md             \# This file
+
 ```
 
------
+---
 
-## Contribuição
+## Contribution
 
-Contribuições são bem-vindas\! Se você tiver sugestões ou encontrar bugs, por favor, abra uma issue ou envie um pull request.
+Contributions are welcome! If you have suggestions or find bugs, please open an issue or submit a pull request.
 
------
+---
 
-## Licença
+## License
 
-Este projeto está licenciado sob a **Licença MIT** - veja o arquivo [LICENSE](./LICENSE.md) para mais detalhes.
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE.md) file for more details.
 
+---
 
------
-
-## Contato
+## Contact
 
 Pedro Arthur Gregorio Abreu - [pedro.agb2004@gmail.com](mailto:pedro.agb2004@gmail.com)
 
-Link do GitHub: [https://github.com/meiyo-aru/jinja-curriculum-render](https://github.com/meiyo-aru/jinja-curriculum-render)
+GitHub Link: [https://github.com/meiyo-aru/jinja-curriculum-render](https://github.com/meiyo-aru/jinja-curriculum-render)
 
------
-
-
+---

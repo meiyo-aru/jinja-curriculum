@@ -125,7 +125,7 @@ Este projeto está licenciado sob a **Licença MIT** - veja o arquivo [LICENSE](
 
 Pedro Arthur Gregorio Abreu - [pedro.agb2004@gmail.com](mailto:pedro.agb2004@gmail.com)
 
-Link do GitHub: [https://github.com/meiyo-aru/jinja_curriculum_render](https://github.com/meiyo-aru/jinja_curriculum_render)
+Link do GitHub: [https://github.com/meiyo-aru/jinja-curriculum-render](https://github.com/meiyo-aru/jinja-curriculum-render)
 
 -----
 

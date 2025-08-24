@@ -89,7 +89,7 @@ Make sure you have the following tools installed:
 
 ## Project Structure
 
-````
+```
 
 jinja\_curriculum\_render/
 ├── venv/                 \# Python virtual environment

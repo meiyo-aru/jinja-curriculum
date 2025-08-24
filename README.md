@@ -1,4 +1,4 @@
-# Jinja Curriculum Render
+# Jinja Curriculum
 
 A Server-Side Rendering (SSR) web service built with **Python** and **Jinja2** to generate dynamic resumes, styled with **SCSS**, and powered by a dedicated **RESTful API**. This project aims to demonstrate the creation of rich, dynamic HTML content by combining backend logic with pre-rendered frontend presentation.
 
@@ -126,6 +126,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 
 Pedro Arthur Gregorio Abreu - [pedro.agb2004@gmail.com](mailto:pedro.agb2004@gmail.com)
 
-GitHub Link: [https://github.com/meiyo-aru/jinja-curriculum-render](https://github.com/meiyo-aru/jinja-curriculum-render)
+GitHub Link: [https://github.com/meiyo-aru/jinja-curriculum](https://github.com/meiyo-aru/jinja-curriculum)
 
 ---
